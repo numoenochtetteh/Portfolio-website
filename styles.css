@@ -1,0 +1,860 @@
+/* ================= Global Reset ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+
+
+/* ================= Page Layout ================= */
+.page-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.page-wrapper::before,
+.page-wrapper::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 1px;
+  background: #ccc;
+  z-index: -1;
+}
+
+.page-wrapper::before {
+  left: 80px;
+}
+
+.page-wrapper::after {
+  right: 80px;
+}
+
+.site-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+/* ================= Header ================= */
+header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  height: 90px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+
+
+/* ================= Hero Section ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 6rem 2rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  padding: 4rem 2rem;  /* This can be reduced */
+  margin-top: 4rem;    /* Reduce or remove this */
+}
+
+
+/* Left column */
+
+.hero-right p {
+  font-size: 0.9rem; /* adjust smaller size as needed */
+  line-height: 1.5;
+  font-family: 'Outfit', sans-serif;
+  color: #2d2e32;
+  font-weight: 400;
+}
+
+.hero-right strong {
+  background-color: #e5f4fc; /* light sky blue */
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-left h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 5rem;           /* adjust size if needed */
+  font-weight: 700;          /* bold like in the screenshot */
+  color: #6f2cff;            /* or the purple outline color */
+  line-height: 1.2;
+}
+
+
+/* .outline {
+  font-family: sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 2px #6f2cff;
+} */
+
+.outline {
+  font-family: 'Outfit', sans-serif;
+  font-size: 6rem;
+  font-weight: 900;
+  color: transparent;
+  text-shadow: 0 0 1px #fbf9ff;
+  -webkit-text-stroke: 1.5px #6f2cff; /* Purple stroke */
+}
+
+
+.tech-icons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.tech-icons img {
+  width: 40px;
+}
+
+/* Right column */
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-right p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.socials {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+
+.socials a {
+  display: inline-block;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 28px; 
+  border: 1px solid #d8d8d8; 
+  background: #ffffff;
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: bacground 0.3s ease, border 0.3s ease;
+  margin-top: 2rem;
+  /* margin-left: 0; */
+}
+
+.resume-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.resume-btn:hover {
+  background-color: #f2ebff;   /* light purple background */
+  border-color: #6f2cff;       /* matches your stroke color */
+  color: #6f2cff;              /* text color on hover */
+  transform: translateY(-2px); /* slight lift effect */
+  box-shadow: 0 4px 12px rgba(111, 44, 255, 0.2); /* soft shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= Services Section ================= */
+.services-intro-box {
+  border: 0.5px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #fdfdfd;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  text-align: left;  
+}
+
+
+.services-header-box {
+  
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left; /* Optional: aligns text to right side */
+}
+
+
+.services {
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 1.1rem; /* You can increase to 1.5rem, 1.6rem, or more */
+  line-height: 1.4;
+  font-weight: 600;  
+}
+
+
+.service-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* .box {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+} */
+
+
+.box {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc; /* light gray border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* optional: soft shadow */
+}
+
+
+.box h3 {
+  font-size: 1.5rem;
+  color: #67646d;
+}
+
+
+
+
+.service-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;         /* Increase or adjust as needed */
+  color: #13003d;          /* Your purple color */
+  font-weight: 700;        /* Make it bold */
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+
+.services-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+  border: 1px solid #ddd; /* ✅ Keep this one */
+  border-radius: 12px;
+  background: #fff; /* Optional: white background inside */
+}
+
+
+.services-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+  .services-image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= Projects Section ================= */
+/* .projects {
+  padding: 4rem 2rem;
+}
+
+.project {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.project-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.project-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  margin-bottom: 1rem;
+}
+
+.tech-tags span {
+  background: #eee;
+  padding: 5px 10px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #6f2cff;
+  text-decoration: none;
+  font-weight: 600;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= Projects Section ================= */
+
+.projects {
+  padding: 40px;
+  background: #ffffff;
+}
+
+.section-title {
+  font-size: 60px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.project {
+  display: flex;
+  gap: 40px;
+}
+
+/* Sidebar */
+.project .sidebar {
+  width: 200px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.project .sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project .sidebar .nav-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.project .sidebar .nav-item:hover {
+  background: #ffffff;
+}
+
+.project .sidebar .nav-item.active {
+  background: #e8daf5;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Main Content */
+.project .main-content {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+}
+
+.project .project-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.project .project-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.project .project-info {
+  flex: 1;
+}
+
+.project .project-info h3 {
+  font-size: 25px !important;
+  margin-bottom: 20px;
+  
+}
+
+.project .project-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tech-tags {
+  margin-bottom: 20px;
+}
+
+.tech-tags span {
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.links a {
+  display: inline-block;
+  background:white;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.links a:hover {
+  background: #4500b5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .project .main-content {
+    flex-direction: column;
+  }
+
+  .project .project-image,
+  .project .project-info {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic badge style */
+.badge {
+  display: inline-block;
+  background: #ccc;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Colors for specific badges */
+.badge.nextjs { background: #9afd91; }          /* NEXT.JS */
+.badge.react-hooks { background: #61dafb; color: #000; }
+.badge.next-auth { background: #99eef0; }
+.badge.mongodb { background: #4caf50; }
+.badge.tailwind-css { background: #06b6d4; }
+
+.badge.react { background: #61dafb; color: #000; }
+.badge.nodejs { background: #3c873a; }
+.badge.express { background: #ffdada; }
+.badge.html { background: #e34c26; }
+.badge.css { background: #899dee; }
+.badge.javascript { background: #f0db4f; color: #000; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= Footer Section ================= */
+.footer {
+  background-color: #ffffff;
+  padding: 60px 20px 20px;
+  text-align: center;
+  /* border-top: 1px solid #eaeaea; */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* .footer-title {
+  font-size: 3rem;
+  color: #6c2bd9;
+  font-weight: 700;
+  margin-bottom: 30px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-title {
+  font-size: 5rem;
+  text-align: left;
+  margin-bottom: 30px;
+  color: rgb(140, 39, 255); /* Add this line */
+}
+
+
+.footer-top-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Wraps on small screens */
+  margin-bottom: 25px;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 25px; /* this is where gap belongs */
+  align-items: center;
+}
+
+
+.social-icons a img {
+  width: 50px;
+  height: 50px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #222;
+  margin-left: 80px; /* Push it to the right inside a flex container */
+}
+
+.phone img {
+  width: 60px;
+  height: 60px;
+}
+
+.phone span {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.4;
+}
+
+
+/* 
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+  /* 👇 Add this *
+  margin-left: 0;
+  
+  justify-content: left;
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .footer .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 30px; 
+  border: 1px solid #ddd; 
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: left;
+  margin-top: 20px;
+} */
+
+
+
+.footer .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 30px; 
+  border: 1px solid #ddd; 
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  margin-left: 0; /* Ensures it's at the left */
+}
+
+.resume-btn:hover {
+  background-color: #f2ebff;   /* light purple background */
+  border-color: #6f2cff;       /* matches your stroke color */
+  color: #6f2cff;              /* text color on hover */
+  transform: translateY(-2px); /* slight lift effect */
+  box-shadow: 0 4px 12px rgba(111, 44, 255, 0.2); /* soft shadow */
+}
+
+
+
+
+
+.footer-bottom {
+  width: 100%;
+  margin-top: 4rem;
+  border-top: 1px solid #ccc;
+  padding-top: 3rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
