@@ -11,7 +11,7 @@
   "heroStory": [
     [
       "After SHS, I taught myself to code through ",
-      { "text": "YouTube tutorials", "icon": "youtube" },
+      "YouTube tutorials",
       " and began building ",
       { "text": "websites", "link": "projects" },
       " for family and friends' businesses. Those early projects grew into freelance work."

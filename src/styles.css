@@ -33,11 +33,14 @@ img { max-width: 100%; display: block; }
 .skip-link:focus { top: 16px; }
 .site-header { position: sticky; top: 0; z-index: 30; background: rgba(251,251,248,.96); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .header-inner { min-height: 68px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
-.brand { font-size: 34px; font-weight: 500; letter-spacing: -.075em; white-space: nowrap; }
-.brand span { font-size: 11px; vertical-align: top; letter-spacing: -.05em; margin-left: 3px; }
+.brand { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; width: max-content; line-height: 1; white-space: nowrap; }
+.brand-prefix { color: #70706d; font-size: 11px; font-weight: 500; letter-spacing: .02em; line-height: 1.2; }
+.brand-person { font-size: 29px; font-weight: 500; letter-spacing: -.075em; line-height: 1; }
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a { font-size: 15px; color: #70706d; transition: color .2s ease; }
 .nav a:hover, .nav a[aria-current="page"] { color: #101010; }
+.nav .nav-social { color: #252b28; }
+.nav-social .link-arrow { font-size: 12px; margin-left: 2px; }
 .nav .nav-cta { padding: 10px 14px; border-radius: 7px; background: #e7f2df; color: #173e31; margin-left: 8px; white-space: nowrap; display: inline-flex; gap: 10px; align-items: center; transition: background .15s ease; }
 .nav .nav-cta:hover { background: #d5eac7; color: #173e31; }
 .nav-cta span { margin-left: 6px; }
@@ -245,7 +248,8 @@ a.brand-tile:hover .brand-name { text-decoration: underline; text-underline-offs
 @media (max-width: 800px) {
   .container { width: min(100% - 40px, 660px); }
   .header-inner { min-height: 66px; }
-  .brand { font-size: 23px; }
+  .brand-prefix { font-size: 10px; }
+  .brand-person { font-size: 24px; }
   .menu-toggle { display: block; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.25px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.25px) rotate(-45deg); }

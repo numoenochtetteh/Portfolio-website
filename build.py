@@ -64,12 +64,13 @@ def header(active):
     return f"""
       <header class="site-header">
         <div class="container header-inner">
-          <a class="brand" href="index.html" aria-label="{h(data['name'])}, home">Enoch<span>®</span></a>
+          <a class="brand" href="index.html" aria-label="Coded by Enoch, home"><span class="brand-prefix">coded by</span><span class="brand-person">Enoch</span></a>
           <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">
             <span></span><span></span>
           </button>
           <nav class="nav" id="main-nav" aria-label="Main navigation">
             {links}
+            <a class="nav-social" href="{h(data['github'])}" target="_blank" rel="noopener noreferrer" aria-label="GitHub, opens in a new tab">GitHub <span class="link-arrow" aria-hidden="true">↗</span></a>
             <a class="nav-cta" href="contact.html">Start a project <span class="link-arrow" aria-hidden="true">↗</span></a>
           </nav>
         </div>
@@ -220,7 +221,6 @@ def home():
           <p class="eyebrow"><span class="plus" aria-hidden="true">+</span> Frontend Developer &amp; Designer · Accra, Ghana</p>
           <h1>{h(data['heroTitle'])} <span>{h(data['heroMuted'])}</span></h1>
           <div class="hero-story">{story}</div>
-          <p class="story-outro">Here's some of what I've made.</p>
           <p class="hero-action"><a class="text-link" href="projects.html">Explore selected work <span class="link-arrow" aria-hidden="true">↗</span></a></p>
         </div>
       </section>
