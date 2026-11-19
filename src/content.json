@@ -1,0 +1,170 @@
+{
+  "name": "Enoch Numo Tetteh",
+  "role": "Frontend Developer & Designer",
+  "location": "Accra, Ghana",
+  "email": "numoenochtettehkent@gmail.com",
+  "github": "https://github.com/numoenochtetteh",
+  "linkedin": "https://www.linkedin.com/in/enoch-numo-tetteh-993432358",
+  "intro": "Enoch Numo Tetteh is a frontend developer and designer in Accra, Ghana, engineering modern solutions for real-world impact.",
+  "heroTitle": "Engineering modern solutions for",
+  "heroMuted": "real-world impact.",
+  "heroStory": [
+    [
+      "After SHS, I taught myself to code through ",
+      { "text": "YouTube tutorials", "icon": "youtube" },
+      " and began building ",
+      { "text": "websites", "link": "projects" },
+      " for family and friends' businesses. Those early projects grew into freelance work."
+    ],
+    [
+      "Today I focus on frontend development and design with ",
+      { "text": "MadeBySebi", "link": "madebysebi" },
+      " and have built for ",
+      { "text": "Lucenex Corp", "link": "lucenex" },
+      ". I share more of what I make on ",
+      { "text": "GitHub", "link": "github" },
+      "."
+    ]
+  ],
+  "aboutStory": [
+    [
+      "I've liked making things since my first calculators and games. After SHS, I learned to code from ",
+      { "text": "YouTube tutorials", "icon": "youtube" },
+      ", then started making ",
+      { "text": "websites", "link": "projects" },
+      " for family and friends' businesses. That work grew into freelance projects."
+    ],
+    [
+      "I studied systems engineering at ",
+      { "text": "IPMC", "link": "ipmc" },
+      ", explored AWS cloud engineering through an internship with ",
+      { "text": "EXL", "link": "exl" },
+      ", and spent time learning data engineering with ",
+      { "text": "Data Engineer Academy", "link": "academy" },
+      ". Those experiences helped me see that frontend development and design are where I want to focus."
+    ],
+    [
+      "Now I lead design at ",
+      { "text": "MadeBySebi", "link": "madebysebi" },
+      " and build web experiences for businesses, including ",
+      { "text": "Lucenex Corp", "link": "lucenex" },
+      ". You can see more of my work on ",
+      { "text": "GitHub", "link": "github" },
+      "."
+    ]
+  ],
+  "linkPreviews": {
+    "projects": { "url": "projects.html", "title": "Selected projects", "detail": "Websites and web products I've built", "image": "femmora.webp" },
+    "ipmc": { "url": "https://ipmctraining.com/programs.html", "title": "IPMC", "detail": "Systems engineering studies", "mark": "IPMC", "theme": "sky" },
+    "exl": { "url": "https://www.exlservice.com/", "title": "EXL", "detail": "AWS cloud engineering", "mark": "EXL", "theme": "coral" },
+    "academy": { "url": "https://dataengineeracademy.com/", "title": "Data Engineer Academy", "detail": "Exploring data engineering", "mark": "DATA", "theme": "lavender" },
+    "madebysebi": { "url": "https://madebysebi.com/", "title": "MadeBySebi", "detail": "Design and development studio", "mark": "madebysebi", "theme": "butter" },
+    "lucenex": { "url": "project-lucenex.html", "title": "Lucenex Corp", "detail": "Data and AI company website", "image": "brand-lucenex.png", "fit": "contain", "theme": "forest" },
+    "github": { "url": "https://github.com/numoenochtetteh", "title": "GitHub", "detail": "@numoenochtetteh", "image": "enoch-portrait.png", "theme": "portrait" }
+  },
+  "brands": [
+    { "name": "Lucenex Corp", "logo": "brand-lucenex.png", "project": "lucenex", "theme": "lucenex" },
+    { "name": "MadeBySebi", "logo": "brand-madebysebi.png", "url": "https://madebysebi.com/", "theme": "madebysebi" },
+    { "name": "Power Electrode", "logo": "brand-power-electrode.png", "project": "power-electrode", "theme": "power" },
+    { "name": "Gas Safety & Plumbing", "logo": "brand-gas-safety.png", "project": "gas-safety", "theme": "gas" },
+    { "name": "THYGRACE", "logo": "brand-thygrace.png", "url": "https://thygracemerch.vercel.app/", "theme": "thygrace" },
+    { "name": "FEMMORA", "logo": "brand-femmora.png", "project": "femmora", "theme": "femmora" },
+    { "name": "Eleganté", "logo": "brand-elegante.png", "theme": "elegante" }
+  ],
+  "tools": [
+    { "name": "React", "icon": "stack-react.svg" },
+    { "name": "Next.js", "icon": "stack-nextdotjs.svg" },
+    { "name": "TypeScript", "icon": "stack-typescript.svg" },
+    { "name": "JavaScript", "icon": "stack-javascript.svg" },
+    { "name": "HTML5", "icon": "stack-html5.svg" },
+    { "name": "CSS", "icon": "stack-css.svg" },
+    { "name": "Tailwind CSS", "icon": "stack-tailwindcss.svg" },
+    { "name": "Vite", "icon": "stack-vite.svg" },
+    { "name": "Git", "icon": "stack-git.svg" },
+    { "name": "GitHub", "icon": "stack-github.svg" },
+    { "name": "Figma", "icon": "stack-figma.svg" },
+    { "name": "Vitest", "icon": "stack-vitest.svg" },
+    { "name": "Supabase", "icon": "stack-supabase.svg" },
+    { "name": "Vercel", "icon": "stack-vercel.svg" }
+  ],
+  "projects": [
+    {
+      "slug": "femmora",
+      "name": "FEMMORA",
+      "category": "Commerce",
+      "type": "Fashion storefront concept",
+      "summary": "A clothing storefront preview with product categories, shopping interactions and a video-led visual direction.",
+      "approach": "The goal was to make browsing feel direct and visual. I built a clear category structure, product presentation and a small-screen experience that keeps the clothes at the centre.",
+      "contribution": "Frontend development and interface design",
+      "stack": "HTML, CSS, JavaScript",
+      "url": "https://femmora-gh.vercel.app/",
+      "image": "femmora-mockup.png",
+      "tone": "femmora"
+    },
+    {
+      "slug": "forever-peng-hair",
+      "name": "Forever Peng Hair",
+      "category": "Product",
+      "type": "Beauty booking platform",
+      "summary": "A London hair business site with guided appointment booking, service options, availability and deposit payment.",
+      "approach": "The booking journey brings services, add-ons, date selection, pricing and the required deposit into one clear flow. I also worked on the customer confirmations and administrative experience.",
+      "contribution": "Frontend development and booking experience",
+      "stack": "Next.js, TypeScript, Tailwind CSS, Stripe",
+      "url": "https://foreverpenghair.com/",
+      "image": "forever-peng-mockup.png",
+      "tone": "peng"
+    },
+    {
+      "slug": "gas-safety",
+      "name": "Gas Safety & Plumbing",
+      "category": "Website",
+      "type": "UK engineering company website",
+      "summary": "A service website for a UK gas, heating and plumbing business, with clear routes to emergency help and enquiries.",
+      "approach": "I organised the business services, contact routes and emergency information so visitors can quickly understand the offer and get in touch.",
+      "contribution": "Frontend development and interface design",
+      "stack": "Next.js, React, TypeScript, Tailwind CSS",
+      "url": "https://gassafetyandplumbingengineeringltd.com/",
+      "image": "gas-safety-mockup.png",
+      "tone": "gas"
+    },
+    {
+      "slug": "power-electrode",
+      "name": "Power Electrode",
+      "category": "Website",
+      "type": "Manufacturer website",
+      "summary": "A company website for a Ghanaian welding electrode manufacturer, covering products, manufacturing and enquiries.",
+      "approach": "The site gives customers a direct route from learning about the products and manufacturing process to contacting the team about their requirements.",
+      "contribution": "Frontend development and content structure",
+      "stack": "Next.js, React, TypeScript, Tailwind CSS",
+      "url": "https://www.powerelectrodeltd.com/",
+      "image": "",
+      "tone": "power"
+    },
+    {
+      "slug": "lucenex",
+      "name": "Lucenex Corp",
+      "category": "Website",
+      "type": "Data and AI company website",
+      "summary": "A corporate website for a data analytics and AI company, with a clearer presentation of its services and contact paths.",
+      "approach": "I worked on responsive page layouts and interface improvements for the company's web presence while collaborating remotely with stakeholders.",
+      "contribution": "Frontend development and responsive UI",
+      "stack": "WordPress, Elementor, custom CSS",
+      "url": "https://www.lucenexcorp.com/",
+      "image": "lucenex.webp",
+      "tone": "lucenex"
+    },
+    {
+      "slug": "numo-and-sebi",
+      "name": "NUMO & SEBI",
+      "category": "Commerce",
+      "type": "Jewellery storefront concept",
+      "summary": "An editorial jewellery shopping concept presenting collections and product details with a restrained visual style.",
+      "approach": "I used a simple shopping structure and prominent product imagery to let the jewellery and its story carry the experience.",
+      "contribution": "Frontend development and interface design",
+      "stack": "React, Vite, TypeScript, Tailwind CSS",
+      "url": "https://jewelry-store-numo-sebi-two.vercel.app/",
+      "image": "numo-sebi.webp",
+      "tone": "sebi"
+    }
+  ]
+}

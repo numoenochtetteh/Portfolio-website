@@ -1,0 +1,13 @@
+{
+  "name": "enoch-numo-tetteh-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A static portfolio with a local Node development server",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
