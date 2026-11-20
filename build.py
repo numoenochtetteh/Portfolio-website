@@ -64,7 +64,7 @@ def header(active):
     return f"""
       <header class="site-header">
         <div class="container header-inner">
-          <a class="brand" href="index.html" aria-label="Coded by Enoch, home"><span class="brand-prefix">coded by</span><span class="brand-person">Enoch</span></a>
+          <a class="brand" href="index.html" aria-label="Coded by Enoch, home"><span class="brand-prefix">coded by</span> <span class="brand-person">Enoch</span></a>
           <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">
             <span></span><span></span>
           </button>
@@ -252,15 +252,20 @@ def shelf_item(item, kind):
 
 def shelf_row(items, kind):
     covers = "".join(shelf_item(item, kind) for item in items)
-    return f'<div class="shelf-scroll"><div class="shelf-row {kind}-row">{covers}</div></div>'
+    return f'<div class="shelf-row {kind}-row">{covers}</div>'
+
+
+def shelf_layout(items, kind):
+    layouts = []
+    for size, name in ((4, "desktop"), (2, "mobile")):
+        rows = "".join(shelf_row(items[i:i + size], kind) for i in range(0, len(items), size))
+        layouts.append(f'<div class="shelf-layout shelf-layout-{name}">{rows}</div>')
+    return "".join(layouts)
 
 
 def shelf_page():
-    books = shelf_row(data["books"], "book")
-    records = "".join(
-        shelf_row(data["records"][i:i + 4], "record")
-        for i in range(0, len(data["records"]), 4)
-    )
+    books = shelf_layout(data["books"], "book")
+    records = shelf_layout(data["records"], "record")
     return f"""
       <section class="page-intro shelf-intro container">
         <p class="eyebrow"><span class="plus" aria-hidden="true">+</span> A few favourites</p>
