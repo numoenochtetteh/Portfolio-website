@@ -93,7 +93,12 @@
     { "title": "Group portrait", "creator": "Cover artwork", "image": "record-group-portrait.webp" },
     { "title": "Geng Geng Shid", "creator": "Cover artwork", "image": "record-geng-geng-shid.webp" },
     { "title": "The Chronic", "creator": "Dr. Dre", "image": "record-dr-dre-the-chronic.webp" },
-    { "title": "Illmatic", "creator": "Nas", "image": "record-nas-illmatic.webp" }
+    { "title": "Illmatic", "creator": "Nas", "image": "record-nas-illmatic.webp" },
+    { "title": "Only Built 4 Cuban Linx...", "creator": "Raekwon", "image": "record-raekwon-cuban-linx.webp" },
+    { "title": "Get Rich or Die Tryin'", "creator": "50 Cent", "image": "record-50-cent-get-rich.webp" },
+    { "title": "Tha Carter III", "creator": "Lil Wayne", "image": "record-lil-wayne-carter-iii.webp" },
+    { "title": "Astroworld", "creator": "Travis Scott", "image": "record-travis-scott-astroworld.webp" },
+    { "title": "Blonde", "creator": "Frank Ocean", "image": "record-frank-ocean-blonde.webp" }
   ],
   "brands": [
     { "name": "Lucenex Corp", "logo": "brand-lucenex.png", "project": "lucenex", "theme": "lucenex" },
