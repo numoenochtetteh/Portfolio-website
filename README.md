@@ -13,17 +13,17 @@ npm run dev
 
 Visit `http://localhost:5173` in your browser. The site has no external npm dependencies; `npm install` just prepares the normal Node project files.
 
-The updated Home page begins **“Engineering modern solutions for real-world impact.”** Hover the highlighted **MadeBySebi**, **Lucenex Corp**, or **GitHub** words in the story on a desktop to see the floating previews. The MadeBySebi card is green and the GitHub card shows Enoch's photo. If you still see an older headline, your browser is showing an earlier extracted folder. Stop that server, run the commands above from this new folder, and refresh the page.
+The Home page begins **“Engineering modern solutions for real-world impact.”** Hover the highlighted links in the story on a desktop to see floating previews. The MadeBySebi highlight is light green, and the GitHub card shows Enoch's full face. The Home story links to a separate bookshelf of six books and eleven unique music covers. The header includes GitHub and the brand reads “coded by Enoch.”
 
 ## Open it without npm
 
 Double-click `index.html` in this folder, or open `dist/index.html` in a browser. No package install or server is needed.
 
-The ZIP includes the prebuilt website, source, project images, brand logos, Enoch's portrait for the GitHub preview, frontend tool icons, a self-hosted Geist font, and a PDF CV. The project pages, filtering, mobile navigation, links, and contact email work without a backend. Inline story links show image or branded preview cards on desktop hover and keyboard focus; they remain normal links on touch devices. The clients section displays the supplied logos in color; a compact toolkit sits below it. All pages share a footer with navigation, social links, and a contact prompt. Main actions use simple link and button states, with no text scramble or audio. Motion is reduced when the visitor requests reduced motion.
+The site includes source, project images, brand logos, Enoch's portrait for the GitHub preview, book and record covers, frontend tool icons, a self-hosted Geist font, and a PDF CV. The project pages, filtering, mobile navigation, links, and contact email work without a backend. Inline story links show image or branded preview cards on desktop hover and keyboard focus; they remain normal links on touch devices. The books and records page uses responsive shelves that can scroll horizontally on small screens. All pages share a footer with navigation, social links, and a contact prompt. Motion is reduced when the visitor requests reduced motion.
 
 ## Edit it
 
-1. Change your name, email, Home headline (`heroTitle` and `heroMuted`), story (`heroStory` and `aboutStory`), project details, brand logos, and tool list in `src/content.json`. In a story paragraph, plain strings are regular text; an object like `{ "text": "GitHub", "link": "github" }` inserts a link. Change its URL and hover-card details in `linkPreviews`. Other section headings are in `build.py`.
+1. Change your name, email, Home headline (`heroTitle` and `heroMuted`), story (`heroStory` and `aboutStory`), books, records, project details, brand logos, and tool list in `src/content.json`. In a story paragraph, plain strings are regular text; an object like `{ "text": "GitHub", "link": "github" }` inserts a link. Change its URL, inline logo, and hover-card details in `linkPreviews`. Other section headings are in `build.py`.
 2. Replace project images or brand logos in `src/assets/` and update their filenames in `src/content.json`.
 3. Change layout and typography in `src/styles.css`.
 4. Run `python3 build.py` to regenerate `dist/`.
@@ -39,6 +39,7 @@ For another static host, upload the contents of `dist/`.
 ## Included pages
 
 - Home with selected projects, an introduction, client logos, and a frontend toolkit
+- My shelf with books and records
 - Filterable Projects page
 - Six project detail pages
 - About page with CV download

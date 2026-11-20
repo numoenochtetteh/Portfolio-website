@@ -11,57 +11,90 @@
   "heroStory": [
     [
       "After SHS, I taught myself to code through ",
-      "YouTube tutorials",
+      { "text": "YouTube tutorials", "link": "youtube" },
       " and began building ",
       { "text": "websites", "link": "projects" },
       " for family and friends' businesses. Those early projects grew into freelance work."
     ],
     [
+      "I continued studying ",
+      { "text": "Front End Web Development", "link": "frontend" },
+      " with ",
+      { "text": "freeCodeCamp", "link": "freecodecamp" },
+      "."
+    ],
+    [
       "Today I focus on frontend development and design with ",
       { "text": "MadeBySebi", "link": "madebysebi" },
-      " and have built for ",
+      " and have built for a US AI and data company, ",
+      { "text": "Lucenex Corp", "link": "lucenex" },
+      ". I share more of what I make on ",
+      { "text": "GitHub", "link": "github" },
+      "."
+    ],
+    [
+      "The books and records I love are on ",
+      { "text": "my shelf", "link": "shelf" },
+      "."
+    ],
+    [ "Here's some of what I've made." ]
+  ],
+  "aboutStory": [
+    [
+      "After SHS, I taught myself to code through ",
+      { "text": "YouTube tutorials", "link": "youtube" },
+      " and began building ",
+      { "text": "websites", "link": "projects" },
+      " for family and friends' businesses. Those early projects grew into freelance work."
+    ],
+    [
+      "I continued studying ",
+      { "text": "Front End Web Development", "link": "frontend" },
+      " with ",
+      { "text": "freeCodeCamp", "link": "freecodecamp" },
+      "."
+    ],
+    [
+      "Today I focus on frontend development and design with ",
+      { "text": "MadeBySebi", "link": "madebysebi" },
+      " and have built for a US AI and data company, ",
       { "text": "Lucenex Corp", "link": "lucenex" },
       ". I share more of what I make on ",
       { "text": "GitHub", "link": "github" },
       "."
     ]
   ],
-  "aboutStory": [
-    [
-      "I've liked making things since my first calculators and games. After SHS, I learned to code from ",
-      { "text": "YouTube tutorials", "icon": "youtube" },
-      ", then started making ",
-      { "text": "websites", "link": "projects" },
-      " for family and friends' businesses. That work grew into freelance projects."
-    ],
-    [
-      "I studied systems engineering at ",
-      { "text": "IPMC", "link": "ipmc" },
-      ", explored AWS cloud engineering through an internship with ",
-      { "text": "EXL", "link": "exl" },
-      ", and spent time learning data engineering with ",
-      { "text": "Data Engineer Academy", "link": "academy" },
-      ". Those experiences helped me see that frontend development and design are where I want to focus."
-    ],
-    [
-      "Now I lead design at ",
-      { "text": "MadeBySebi", "link": "madebysebi" },
-      " and build web experiences for businesses, including ",
-      { "text": "Lucenex Corp", "link": "lucenex" },
-      ". You can see more of my work on ",
-      { "text": "GitHub", "link": "github" },
-      "."
-    ]
-  ],
   "linkPreviews": {
-    "projects": { "url": "projects.html", "title": "Selected projects", "detail": "Websites and web products I've built", "image": "femmora.webp" },
-    "ipmc": { "url": "https://ipmctraining.com/programs.html", "title": "IPMC", "detail": "Systems engineering studies", "mark": "IPMC", "theme": "sky" },
-    "exl": { "url": "https://www.exlservice.com/", "title": "EXL", "detail": "AWS cloud engineering", "mark": "EXL", "theme": "coral" },
-    "academy": { "url": "https://dataengineeracademy.com/", "title": "Data Engineer Academy", "detail": "Exploring data engineering", "mark": "DATA", "theme": "lavender" },
-    "madebysebi": { "url": "https://madebysebi.com/", "title": "MadeBySebi", "detail": "Design and development studio", "mark": "madebysebi", "theme": "butter" },
-    "lucenex": { "url": "project-lucenex.html", "title": "Lucenex Corp", "detail": "Data and AI company website", "image": "brand-lucenex.png", "fit": "contain", "theme": "forest" },
-    "github": { "url": "https://github.com/numoenochtetteh", "title": "GitHub", "detail": "@numoenochtetteh", "image": "enoch-portrait.png", "theme": "portrait" }
+    "youtube": { "url": "https://www.youtube.com/", "title": "YouTube", "detail": "Where my coding journey started", "mark": "YouTube", "icon": "inline-youtube.svg", "theme": "coral" },
+    "projects": { "url": "projects.html", "title": "Selected projects", "detail": "Websites and web products I've built", "image": "femmora.webp", "icon": "favicon.svg" },
+    "frontend": { "url": "https://www.linkedin.com/in/enoch-numo-tetteh-993432358/details/education/", "title": "Front End Web Development", "detail": "My education on LinkedIn", "mark": "Front End", "icon": "inline-linkedin.png", "theme": "sky" },
+    "freecodecamp": { "url": "https://www.freecodecamp.org/learn/", "title": "freeCodeCamp", "detail": "Learning to build for the web", "mark": "freeCodeCamp", "icon": "inline-freecodecamp.svg", "theme": "camp" },
+    "madebysebi": { "url": "https://madebysebi.com/", "title": "MadeBySebi", "detail": "Design and development studio", "mark": "madebysebi", "icon": "brand-madebysebi.png", "theme": "butter" },
+    "lucenex": { "url": "project-lucenex.html", "title": "Lucenex Corp", "detail": "US AI and data company", "image": "brand-lucenex.png", "icon": "brand-lucenex.png", "fit": "contain", "theme": "forest" },
+    "github": { "url": "https://github.com/numoenochtetteh", "title": "GitHub", "detail": "@numoenochtetteh", "image": "enoch-portrait.png", "icon": "stack-github.svg", "theme": "portrait" },
+    "shelf": { "url": "shelf.html", "title": "My shelf", "detail": "Books and records I love", "image": "book-atomic-habits.webp", "icon": "book-atomic-habits.webp", "fit": "contain", "theme": "stone" }
   },
+  "books": [
+    { "title": "Clean Code", "creator": "Robert C. Martin", "image": "book-clean-code.webp" },
+    { "title": "Eloquent JavaScript", "creator": "Marijn Haverbeke", "image": "book-eloquent-javascript.webp" },
+    { "title": "Learning React", "creator": "Alex Banks and Eve Porcello", "image": "book-learning-react.webp" },
+    { "title": "Atomic Habits", "creator": "James Clear", "image": "book-atomic-habits.webp" },
+    { "title": "Can't Hurt Me", "creator": "David Goggins", "image": "book-cant-hurt-me.webp" },
+    { "title": "The Power of Habit", "creator": "Charles Duhigg", "image": "book-power-of-habit.webp" }
+  ],
+  "records": [
+    { "title": "Love Deluxe", "creator": "Sade", "image": "record-sade-love-deluxe.webp" },
+    { "title": "Scorpion", "creator": "Drake", "image": "record-drake-scorpion.webp" },
+    { "title": "Certified Lover Boy", "creator": "Drake", "image": "record-drake-certified-lover-boy.webp" },
+    { "title": "Illustrated portrait", "creator": "Cover artwork", "image": "record-illustrated-portrait.webp" },
+    { "title": "Teflon Don", "creator": "Rick Ross", "image": "record-rick-ross-teflon-don.webp" },
+    { "title": "Black and white room", "creator": "Cover artwork", "image": "record-black-and-white-room.webp" },
+    { "title": "Young artist", "creator": "Cover artwork", "image": "record-young-artist.webp" },
+    { "title": "Group portrait", "creator": "Cover artwork", "image": "record-group-portrait.webp" },
+    { "title": "Geng Geng Shid", "creator": "Cover artwork", "image": "record-geng-geng-shid.webp" },
+    { "title": "The Chronic", "creator": "Dr. Dre", "image": "record-dr-dre-the-chronic.webp" },
+    { "title": "Illmatic", "creator": "Nas", "image": "record-nas-illmatic.webp" }
+  ],
   "brands": [
     { "name": "Lucenex Corp", "logo": "brand-lucenex.png", "project": "lucenex", "theme": "lucenex" },
     { "name": "MadeBySebi", "logo": "brand-madebysebi.png", "url": "https://madebysebi.com/", "theme": "madebysebi" },

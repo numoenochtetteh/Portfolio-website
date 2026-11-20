@@ -96,6 +96,7 @@ def footer():
             <h3>Navigate</h3>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
+            <a href="shelf.html">My shelf</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </nav>
@@ -141,19 +142,11 @@ def shell(title, description, body, active=""):
 </html>"""
 
 
-def rich_paragraph(segments, lead=False):
+def rich_paragraph(segments, lead=False, outro=False):
     parts = []
     for segment in segments:
         if isinstance(segment, str):
             parts.append(h(segment))
-            continue
-        if segment.get("icon") == "youtube":
-            parts.append(
-                '<span class="inline-icon-label"><svg class="youtube-icon" viewBox="0 0 24 24" '
-                'aria-hidden="true" focusable="false"><rect x="1" y="4.3" width="22" height="15.4" '
-                'rx="4.4" fill="#f03d34"/><path d="m10 8 6 4-6 4z" fill="#fff"/></svg>'
-                f'{h(segment["text"])}</span>'
-            )
             continue
         preview = data["linkPreviews"][segment["link"]]
         url = preview["url"]
@@ -167,8 +160,10 @@ def rich_paragraph(segments, lead=False):
             f'data-preview-fit="{h(preview.get("fit", "cover"))}"'
         )
         target = ' target="_blank" rel="noopener noreferrer"' if external else ""
-        parts.append(f'<a class="preview-link preview-{h(segment["link"])}" href="{h(url)}" {attributes}{target}>{h(segment["text"])}</a>')
-    klass = ' class="lead"' if lead else ''
+        icon = preview.get("icon")
+        icon_html = f'<img class="inline-link-icon" src="assets/{h(icon)}" alt="" aria-hidden="true">' if icon else ''
+        parts.append(f'<a class="preview-link preview-{h(segment["link"])}" href="{h(url)}" {attributes}{target}>{icon_html}{h(segment["text"])}</a>')
+    klass = ' class="lead"' if lead else ' class="story-outro"' if outro else ''
     return f'<p{klass}>{"".join(parts)}</p>'
 
 
@@ -214,14 +209,13 @@ def tools_section():
 def home():
     selected = projects[:3]
     items = "".join(card(p, n) for n, p in enumerate(selected))
-    story = "".join(rich_paragraph(p) for p in data["heroStory"])
+    story = "".join(rich_paragraph(p, outro=i == len(data["heroStory"]) - 1) for i, p in enumerate(data["heroStory"]))
     return f"""
       <section class="hero story-hero container">
         <div class="hero-copy">
           <p class="eyebrow"><span class="plus" aria-hidden="true">+</span> Frontend Developer &amp; Designer · Accra, Ghana</p>
           <h1>{h(data['heroTitle'])} <span>{h(data['heroMuted'])}</span></h1>
           <div class="hero-story">{story}</div>
-          <p class="hero-action"><a class="text-link" href="projects.html">Explore selected work <span class="link-arrow" aria-hidden="true">↗</span></a></p>
         </div>
       </section>
       <section class="work-section container" id="work" aria-labelledby="work-title">
@@ -243,6 +237,45 @@ def home():
       </section>
       {brands_section()}
       {tools_section()}
+    """
+
+
+def shelf_item(item, kind):
+    title = item["title"]
+    creator = item["creator"]
+    label = f"{title} by {creator}" if creator != "Cover artwork" else f"Cover artwork: {title}"
+    return f'''<figure class="shelf-item {kind}" title="{h(label)}">
+      <img src="assets/{h(item['image'])}" alt="{h(label)}" loading="lazy" decoding="async">
+      <figcaption class="visually-hidden">{h(label)}</figcaption>
+    </figure>'''
+
+
+def shelf_row(items, kind):
+    covers = "".join(shelf_item(item, kind) for item in items)
+    return f'<div class="shelf-scroll"><div class="shelf-row {kind}-row">{covers}</div></div>'
+
+
+def shelf_page():
+    books = shelf_row(data["books"], "book")
+    records = "".join(
+        shelf_row(data["records"][i:i + 4], "record")
+        for i in range(0, len(data["records"]), 4)
+    )
+    return f"""
+      <section class="page-intro shelf-intro container">
+        <p class="eyebrow"><span class="plus" aria-hidden="true">+</span> A few favourites</p>
+        <h1>My shelf<span class="period">.</span></h1>
+        <p>Books and records I keep coming back to.</p>
+      </section>
+      <section class="shelf-section container" aria-labelledby="books-title">
+        <div class="shelf-heading"><h2 id="books-title">Books</h2><span>01 / 02</span></div>
+        {books}
+      </section>
+      <section class="shelf-section record-section container" aria-labelledby="records-title">
+        <div class="shelf-heading"><h2 id="records-title">Records</h2><span>02 / 02</span></div>
+        {records}
+        <a class="shelf-home-link text-link" href="index.html">Back to my work <span class="link-arrow" aria-hidden="true">↗</span></a>
+      </section>
     """
 
 
@@ -366,6 +399,7 @@ def main():
         target = ASSETS / filename if filename.endswith(".svg") else DIST / filename
         copy2(source, target)
     write("index.html", "Frontend Developer and Designer", data["intro"], home(), "home")
+    write("shelf.html", "My shelf", "Books and records Enoch Numo Tetteh loves.", shelf_page(), "shelf")
     write("projects.html", "Projects", "Selected websites and web products by Enoch Numo Tetteh.", projects_page(), "projects")
     write("about.html", "About", "About Enoch Numo Tetteh, frontend developer and designer in Accra.", about_page(), "about")
     write("contact.html", "Contact", "Contact Enoch Numo Tetteh about frontend development and web projects.", contact_page(), "contact")
